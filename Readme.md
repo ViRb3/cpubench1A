@@ -11,6 +11,24 @@ It runs a number of throughput oriented tests to establish:
 
 An OS processor is defined as an entry in the /proc/cpuinfo file. Depending on the hardware, hypervisor, and operating system configuration, it can correspond to a full CPU core, a vCPU, or just a hardware thread.
 
+## Quick test
+
+Downloads the v4.0.0 release binary for your OS/CPU, runs one single-threaded and one multi-threaded iteration (~60 s each), and prints both scores.
+
+Linux, macOS, or Windows with Git Bash/MSYS2/Cygwin:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/ViRb3/cpubench1A/main/cpubench.sh | sh
+```
+
+Windows (PowerShell):
+
+```powershell
+irm https://raw.githubusercontent.com/ViRb3/cpubench1A/main/cpubench.ps1 | iex
+```
+
+These are a single iteration each, so for comparable numbers use the full `-bench` run described below.
+
 ## Build and launch
 
 The easiest way to run this tool is to directly download the binaries from github (see the releases). If this is not possible or acceptable, it is easy enough to build it, provided the correct version of the Go compiler is installed.
